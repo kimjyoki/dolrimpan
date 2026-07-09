@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>판교 술상 돌림판 — 가족오락관</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div id="confetti"></div>
+
+<header class="titlebar">
+  <div class="star">★</div>
+  <h1><span>판교</span> 술상 <span>돌림판</span></h1>
+  <div class="star">★</div>
+  <p class="subtitle">제 1 회 · 판교역 반경 2km 소주 대잔치</p>
+</header>
+
+<main class="layout">
+
+  <!-- 좌: 브라운관 TV + 컨트롤 -->
+  <section class="col left">
+    <div class="tv">
+      <div class="tv-screen">
+        <div id="yt"></div>
+        <button id="yt-hint" class="yt-hint hidden">🔇 눌러서 소리 켜기</button>
+        <div id="yt-error" class="yt-error hidden"></div>
+      </div>
+      <div class="tv-panel">
+        <div class="tv-brand">MUSHVENOM<small id="tv-track">돌림판 (feat. 신빠람 이박사)</small></div>
+        <div class="knobs"><i></i><i></i></div>
+      </div>
+    </div>
+
+    <div class="panel controls">
+      <h3>돌림판 설정</h3>
+
+      <label class="row"><span>판교역에서</span></label>
+      <div id="dists" class="chips"></div>
+
+      <label class="row"><span>업종</span></label>
+      <div id="cats" class="chips"></div>
+
+      <div class="row two">
+        <label>
+          <span>칸 수</span>
+          <select id="count">
+            <option value="8">8칸</option>
+            <option value="12">12칸</option>
+            <option value="16" selected>16칸</option>
+            <option value="20">20칸</option>
+            <option value="24">24칸</option>
+            <option value="40">40칸 (이름만)</option>
+            <option value="0">전부 다</option>
+          </select>
+        </label>
+        <label>
+          <span>고르는 기준</span>
+          <select id="sort">
+            <option value="score" selected>인기순</option>
+            <option value="rating">별점순</option>
+            <option value="dist">가까운순</option>
+            <option value="random">랜덤</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="row btns">
+        <button id="reroll" class="btn small">🎲 후보 다시 뽑기</button>
+        <button id="mute" class="btn small">🔊 효과음</button>
+      </div>
+
+      <p id="status" class="status"></p>
+    </div>
+  </section>
+
+  <!-- 중앙: 돌림판 -->
+  <section class="col center">
+    <div class="stage">
+      <div class="wheel-box">
+        <canvas id="wheel"></canvas>
+      </div>
+    </div>
+
+    <div class="spin-area">
+      <div id="power" class="power">
+        <div id="power-fill" class="power-fill"></div>
+        <span class="power-label">힘 모으기</span>
+      </div>
+      <button id="spin" class="btn spin">
+        <b>꾹 눌렀다 놓기</b>
+        <small>스페이스바 / 판을 직접 던져도 됩니다</small>
+      </button>
+    </div>
+  </section>
+
+  <!-- 우: 결과 + 목록 -->
+  <section class="col right">
+    <div id="result" class="panel result hidden"></div>
+
+    <div class="panel pool">
+      <div class="caption-bar sm">돌림판에 올라간 가게</div>
+      <ul id="pool-list"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  판교역(37.39465, 127.11138) 반경 2km · 주류를 파는 가게 486곳 · 카페·베이커리만 제외<br>
+  가게 정보 출처 · 다이닝코드 공개 검색 결과 (2026년 7월 수집) · 🍶 = 메뉴나 리뷰에서 소주 판매를 직접 확인한 곳
+</footer>
+
+<script src="data.js"></script>
+<script src="wheel.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
