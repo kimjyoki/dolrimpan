@@ -26,9 +26,9 @@ const clamp = (v, lo, hi) => (v < lo ? lo : v > hi ? hi : v);
 /* ------------------------------------------------------------------ */
 const PHYS = {
   wheelInertia: 1.0,
-  coulomb: 0.16, // 축 마찰 (속도 무관, 정지 마찰도 겸함)
-  viscous: 0.2, // 점성 감쇠 (속도 비례)
-  drag: 0.014, // 공기저항 (속도 제곱 비례)
+  coulomb: 0.24, // 축 마찰 (속도 무관, 정지 마찰도 겸함)
+  viscous: 0.42, // 점성 감쇠 (속도 비례)
+  drag: 0.022, // 공기저항 (속도 제곱 비례)
 
   pinInertia: 0.0016,
   pinSpring: 0.42, // 핀을 아래로 되돌리는 스프링
@@ -36,7 +36,7 @@ const PHYS = {
   pinMaxDeflect: 0.62, // 핀이 peg를 타 넘을 때 최대 젖힘각 (rad)
   pinBackStop: 0.07, // 반대쪽으로 넘어가지 못하게 막는 스토퍼
   pinRestitution: 0.38, // 스토퍼 반발계수
-  contactDamp: 0.34, // peg-핀 접촉면에서 갉아먹는 에너지
+  contactDamp: 0.5, // peg-핀 접촉면에서 갉아먹는 에너지
   // 핀 스프링 토크가 휠에 전달될 때의 모멘트암.
   // 픽셀 기하(pegR/pinLen)로 계산하면 창 크기가 물리를 바꾸므로 상수로 고정한다.
   pinArm: 3.0,
@@ -128,6 +128,26 @@ class Sfx {
       o.connect(g).connect(this.bus);
       o.start(t);
       o.stop(t + 0.36);
+    });
+  }
+
+  /** 탈락 부저 — 낮게 깔리는 두 음 */
+  buzz() {
+    if (!this.enabled || !this.ctx) return;
+    const t0 = this.ctx.currentTime;
+    [0, 0.16].forEach((off) => {
+      const t = t0 + off;
+      const o = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      o.type = 'sawtooth';
+      o.frequency.setValueAtTime(150, t);
+      o.frequency.linearRampToValueAtTime(96, t + 0.13);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.16, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.14);
+      o.connect(g).connect(this.bus);
+      o.start(t);
+      o.stop(t + 0.16);
     });
   }
 
@@ -459,6 +479,9 @@ class Wheel {
     const showImg = n <= 26;
     const showText = n <= 40;
 
+    // 가게 이름이 앉는 바깥쪽 띠. 조각 색·사진과 무관하게 흰 글씨가 읽히도록 위에 덮는다.
+    const bandIn = R * 0.42;
+
     for (let i = 0; i < n; i++) {
       const a0 = i * slice;
       const a1 = a0 + slice;
@@ -489,10 +512,8 @@ class Wheel {
       g.stroke();
 
       const it = this.items[i];
-      const dark = ['#ffd400', '#f2761b', '#2ea84f'].includes(color);
-      const fg = dark ? '#231000' : '#ffffff';
 
-      // 사진
+      // 사진 — 글씨 띠 아래에 깔리는 배경
       if (showImg && it.img) {
         const img = this.images.get(it.img);
         if (img && img.complete && img.naturalWidth) {
@@ -515,28 +536,74 @@ class Wheel {
         }
       }
 
+      // 글씨 띠 — 안쪽으로 투명하게 풀어서 조각 색과 사진이 비쳐 보이게
+      if (showText) {
+        g.beginPath();
+        g.arc(0, 0, R, a0, a1);
+        g.arc(0, 0, bandIn, a1, a0, true);
+        g.closePath();
+        const band = g.createRadialGradient(0, 0, bandIn, 0, 0, R);
+        band.addColorStop(0, 'rgba(10,5,0,0)');
+        band.addColorStop(0.35, 'rgba(10,5,0,0.52)');
+        band.addColorStop(1, 'rgba(10,5,0,0.72)');
+        g.fillStyle = band;
+        g.fill();
+
+        // 띠가 덮어버린 조각 경계를 다시 긋는다
+        g.beginPath();
+        g.moveTo(0, 0);
+        g.arc(0, 0, R, a0, a1);
+        g.closePath();
+        g.strokeStyle = 'rgba(255,255,255,0.5)';
+        g.lineWidth = 1.5;
+        g.stroke();
+      }
+
       // 이름 + 대표메뉴 (반경 방향으로 눕혀서)
       if (showText) {
         g.save();
         g.rotate(mid);
         g.textAlign = 'right';
         g.textBaseline = 'middle';
-        const nameSize = clamp(slice * R * 0.34, 9, 19);
-        const menuSize = nameSize * 0.72;
-        const edge = R - 16;
+        const baseSize = clamp(slice * R * 0.44, 12, 26);
+        const menuSize = baseSize * 0.62;
+        const edge = R - 14;
+        const maxW = R - bandIn - 10;
+        g.lineJoin = 'round';
+        g.miterLimit = 2;
 
-        g.fillStyle = fg;
-        g.font = `800 ${nameSize}px "Gothic A1", "Malgun Gothic", sans-serif`;
-        g.shadowColor = dark ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.45)';
-        g.shadowBlur = 3;
-        const label = it.soju ? '🍶' + it.name : it.name;
-        g.fillText(this._ellipsis(g, label, R * 0.42), edge, showImg ? -menuSize * 0.72 : -menuSize * 0.5);
+        // 🍶는 이름 줄이 아니라 메뉴 줄에 붙인다 — 이름 자리를 한 글자도 뺏지 않게
+        const nameY = -menuSize * 0.62;
+        const short = this._shortName(it.name);
+
+        // 이름이 넘치면 자르기 전에 글자부터 줄인다. 창이 좁을 때 세 글자만 남는 걸 막는다.
+        g.font = `900 ${baseSize}px "Gothic A1", "Malgun Gothic", sans-serif`;
+        const full = g.measureText(short).width;
+        const nameSize = full > maxW ? Math.max(baseSize * 0.6, (baseSize * maxW) / full) : baseSize;
+
+        g.font = `900 ${nameSize}px "Gothic A1", "Malgun Gothic", sans-serif`;
+        const name = this._ellipsis(g, short, maxW);
+        g.strokeStyle = 'rgba(0,0,0,0.92)';
+        g.lineWidth = Math.max(3, nameSize * 0.24);
+        g.strokeText(name, edge, nameY);
+        g.fillStyle = '#ffffff';
+        g.fillText(name, edge, nameY);
 
         if (n <= 30) {
-          g.font = `600 ${menuSize}px "Gothic A1", "Malgun Gothic", sans-serif`;
-          g.globalAlpha = 0.88;
-          g.fillText(this._ellipsis(g, it.menu, R * 0.4), edge, showImg ? menuSize * 0.5 : menuSize * 0.6);
-          g.globalAlpha = 1;
+          const menuY = menuSize * 0.72;
+          g.font = `700 ${menuSize}px "Gothic A1", "Malgun Gothic", sans-serif`;
+          const menu = this._ellipsis(g, it.menu, maxW - (it.soju ? menuSize * 1.3 : 0));
+          g.strokeStyle = 'rgba(0,0,0,0.85)';
+          g.lineWidth = Math.max(2.4, menuSize * 0.24);
+          g.strokeText(menu, edge, menuY);
+          g.fillStyle = '#ffe9a8';
+          g.fillText(menu, edge, menuY);
+
+          if (it.soju) {
+            const w = g.measureText(menu).width;
+            g.font = `${menuSize}px "Gothic A1", sans-serif`;
+            g.fillText('🍶', edge - w - menuSize * 0.2, menuY);
+          }
         }
         g.restore();
       }
@@ -561,6 +628,21 @@ class Wheel {
     }
 
     this.faceDirty = false;
+  }
+
+  /**
+   * 조각에 들어갈 짧은 상호.
+   * "정돈 현대백화점 판교점" 처럼 뒤에 붙는 지점명을 떼야 정작 상호가 안 잘린다.
+   * 목록·결과 카드에는 원래 이름을 그대로 쓴다.
+   */
+  _shortName(name) {
+    let n = String(name).replace(/\s*[(（][^)）]*[)）]\s*$/, '').trim();
+    for (let i = 0; i < 3; i++) {
+      const m = n.match(/^(.+?)\s+\S*(?:본점|직영점|호점|지점|점)$/);
+      if (!m || m[1].trim().length < 2) break;
+      n = m[1].trim();
+    }
+    return n;
   }
 
   _ellipsis(g, text, maxW) {

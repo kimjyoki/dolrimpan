@@ -12,7 +12,6 @@ const CATEGORIES = [
   { key: 'sea', label: '회·해산물', test: (c) => /횟집|회$|연어|광어|장어|생선|매운탕|해산물|조개|꼬막|골뱅이|낙지|문어|대게|전복|새우|굴/.test(c) },
   { key: 'korean', label: '한식·국밥·포차', test: (c) => /한식|포차|국밥|순대|해장국|곰탕|설렁탕|갈비탕|육개장|찌개|전골|된장|보리굴비|냉면|칼국수|백반|집밥|정식/.test(c) },
   { key: 'beer', label: '맥주·펍', test: (c) => /맥주|펍|생맥|흑맥주|피맥|브루|탭하우스/.test(c) },
-  { key: 'wine', label: '와인·바·위스키', test: (c) => /와인|위스키|칵테일|하이볼|바$|^바,|스피크이지/.test(c) },
   { key: 'makgeolli', label: '막걸리·주점', test: (c) => /막걸리|주점|양조장|술집/.test(c) },
   { key: 'world', label: '중식·양식·아시안', test: (c) => /중식|중국|마라|짬뽕|북경오리|파스타|피자|이탈리안|양식|프렌치|스페인|감바스|버거|태국|베트남|쌀국수|멕시칸|타코|다이닝|비스트로|퓨전/.test(c) },
 ];
@@ -26,14 +25,57 @@ const DISTANCES = [
 const state = {
   cat: 'all',
   sort: 'score',
-  count: 16,
+  count: 0,
   dist: 2000,
   pool: [],
   slots: [],
+  exiled: new Set(), // 탈락시킨 가게 id
+  banSigs: [], // 탈락한 가게의 업종·태그 지문. 여기 걸리면 다시 안 올라온다
 };
 
 const sfx = new Sfx();
 const wheel = new Wheel($('#wheel'), sfx);
+
+/* ------------------------------------------------------------------ */
+/* 업종·태그 유사도                                                      */
+/* ------------------------------------------------------------------ */
+
+// 'soju'는 업종이 아니라 속성이고, 'all'은 전부 걸리니 유사도 판정에서 뺀다
+const GENRES = CATEGORIES.filter((c) => c.key !== 'all' && c.key !== 'soju');
+
+function genresOf(s) {
+  return GENRES.filter((g) => g.test(s.cat, s)).map((g) => g.key);
+}
+
+/** 세부 업종 낱말. 큰 업종이 같아도 순대국과 해장국은 다른 집으로 친다 */
+function detailKeys(s) {
+  return tokensOf(s).slice(0, 1);
+}
+
+function tokensOf(s) {
+  return String(s.cat)
+    .split(/[,·/&]/)
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
+function sigOf(s) {
+  return {
+    genres: new Set(genresOf(s)),
+    toks: new Set(tokensOf(s)),
+    tags: new Set(s.tags || []),
+  };
+}
+
+/** 큰 업종이 겹치거나, 세부 업종 문구가 겹치거나, 태그가 둘 이상 겹치면 "비슷한 집" */
+function matchesSig(s, sig) {
+  if (genresOf(s).some((g) => sig.genres.has(g))) return true;
+  if (tokensOf(s).some((t) => sig.toks.has(t))) return true;
+  return (s.tags || []).filter((t) => sig.tags.has(t)).length >= 2;
+}
+
+/** 지문을 몇 개나 포기하고 칸을 채웠는지. 0이면 탈락 의사를 완전히 지켰다는 뜻 */
+let relaxed = 0;
 
 /* ------------------------------------------------------------------ */
 /* 후보 뽑기                                                            */
@@ -44,10 +86,7 @@ function buildPool() {
   state.pool = window.STORES.filter((s) => s.dist <= state.dist && cat.test(s.cat, s));
 }
 
-function pickSlots() {
-  buildPool();
-  let list = state.pool.slice();
-
+function sortList(list) {
   if (state.sort === 'random') {
     for (let i = list.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -60,6 +99,30 @@ function pickSlots() {
   } else {
     list.sort((a, b) => b.score - a.score);
   }
+  return list;
+}
+
+/**
+ * 탈락 지문을 피한 후보.
+ * 칸을 못 채우면 오래된 지문부터 하나씩 놓아준다 — 방금 탈락시킨 업종이 되살아나는 건 마지막 수단.
+ * 탈락시킨 가게 자신은 어떤 경우에도 다시 오르지 않는다.
+ */
+function eligible(need) {
+  const alive = state.pool.filter((s) => !state.exiled.has(s.id));
+  let list = alive;
+  for (let drop = 0; drop <= state.banSigs.length; drop++) {
+    const sigs = state.banSigs.slice(drop);
+    list = alive.filter((s) => !sigs.some((sig) => matchesSig(s, sig)));
+    relaxed = drop;
+    if (list.length >= need) break;
+  }
+  return sortList(list);
+}
+
+function pickSlots() {
+  buildPool();
+  const need = state.count || 0; // '전부 다'(0)는 채울 최소 개수가 없다
+  const list = eligible(need);
 
   const n = state.count === 0 ? list.length : Math.min(state.count, list.length);
   state.slots = list.slice(0, n);
@@ -78,15 +141,100 @@ function pickSlots() {
 }
 
 /* ------------------------------------------------------------------ */
+/* 탈락 — 비슷한 집을 통째로 빼고 새 업종으로 채운다                      */
+/* ------------------------------------------------------------------ */
+
+function eliminate(store) {
+  if (wheel.spinning) return;
+
+  const sig = sigOf(store);
+  const doomed = state.slots.filter((s) => s.id === store.id || matchesSig(s, sig));
+  if (!doomed.length) return;
+
+  state.banSigs.push(sig);
+  doomed.forEach((s) => state.exiled.add(s.id));
+
+  sfx.resume();
+  sfx.buzz();
+
+  const doomedIds = new Set(doomed.map((s) => s.id));
+  state.slots.forEach((s, i) => {
+    if (!doomedIds.has(s.id)) return;
+    const li = $(`#pool-list li[data-idx="${i}"]`);
+    if (li) li.classList.add('doomed');
+  });
+
+  $('#result').classList.add('hidden');
+  setTimeout(() => refill(doomedIds), 520);
+}
+
+/**
+ * 빠진 자리마다 새 가게를 꽂는다.
+ * 아직 안 나온 큰 업종을 먼저, 그다음 안 나온 세부 업종을, 그래도 모자라면 아무나.
+ */
+function refill(doomedIds) {
+  const keptIds = new Set(state.slots.filter((s) => !doomedIds.has(s.id)).map((s) => s.id));
+  const need = state.slots.length - keptIds.size;
+
+  const kept = state.slots.filter((s) => keptIds.has(s.id));
+  const seenGenre = new Set(kept.flatMap(genresOf));
+  const seenDetail = new Set(kept.flatMap(detailKeys));
+  const cands = eligible(need + keptIds.size).filter((s) => !keptIds.has(s.id));
+
+  const fresh = [];
+  const taken = new Set();
+  const sweep = (keysOf, seen, skipKeyless) => {
+    for (const c of cands) {
+      if (fresh.length >= need) return;
+      if (taken.has(c.id)) continue;
+      const ks = keysOf(c);
+      if (!ks.length && skipKeyless) continue; // 업종 미분류는 1차에서 건너뛴다
+      if (ks.length && ks.every((k) => seen.has(k))) continue;
+      ks.forEach((k) => seen.add(k));
+      fresh.push(c);
+      taken.add(c.id);
+    }
+  };
+  sweep(genresOf, seenGenre, true);
+  sweep(detailKeys, seenDetail, false);
+  for (const c of cands) {
+    if (fresh.length >= need) break;
+    if (!taken.has(c.id)) fresh.push(c);
+  }
+
+  const incoming = new Set(fresh.map((s) => s.id));
+  state.slots = state.slots.map((s) => (keptIds.has(s.id) ? s : fresh.shift())).filter(Boolean);
+
+  wheel.setItems(state.slots);
+  renderPool();
+  updateStatus();
+  $$('#pool-list li').forEach((li) => {
+    if (incoming.has(li.dataset.id)) li.classList.add('fresh');
+  });
+}
+
+function revive() {
+  if (wheel.spinning) return;
+  state.exiled.clear();
+  state.banSigs = [];
+  pickSlots();
+}
+
+/* ------------------------------------------------------------------ */
 /* 화면 갱신                                                            */
 /* ------------------------------------------------------------------ */
 
 function updateStatus() {
   const label = DISTANCES.find((d) => d.key === state.dist).label;
   const soju = state.slots.filter((s) => s.soju).length;
+  const out = state.exiled.size;
   $('#status').innerHTML =
     `판교역 반경 ${label} · 후보 <b>${state.pool.length}</b>곳 중 <b>${state.slots.length}</b>칸 배치` +
-    (soju ? ` · 🍶 소주 확인 <b>${soju}</b>곳` : '');
+    (soju ? ` · 🍶 소주 확인 <b>${soju}</b>곳` : '') +
+    (out ? ` · ❌ 탈락 <b>${out}</b>곳 <button id="revive" class="link">되살리기</button>` : '') +
+    (relaxed ? `<br><span class="warn">남은 가게가 모자라 오래된 탈락 업종 ${relaxed}개를 다시 올렸습니다</span>` : '');
+  const rv = $('#revive');
+  if (rv) rv.onclick = revive;
 }
 
 function renderPool() {
@@ -95,6 +243,7 @@ function renderPool() {
   state.slots.forEach((s, i) => {
     const li = document.createElement('li');
     li.dataset.idx = i;
+    li.dataset.id = s.id;
     li.innerHTML = `
       <span class="no">${String(i + 1).padStart(2, '0')}</span>
       <img src="${s.img}" alt="" loading="lazy" referrerpolicy="no-referrer">
@@ -123,6 +272,9 @@ function showResult(store, idx) {
   box.classList.add('pop');
 
   const naver = `https://map.naver.com/p/search/${encodeURIComponent('판교역 ' + store.name)}`;
+  const sig = sigOf(store);
+  const hit = state.slots.filter((s) => s.id === store.id || matchesSig(s, sig)).length;
+
   box.innerHTML = `
     <div class="caption-bar">오늘의 술상 당첨!</div>
     <div class="result-body">
@@ -132,9 +284,13 @@ function showResult(store, idx) {
         <p class="menu">🍺 대표메뉴 · <b>${escapeHtml(store.menu)}</b></p>
         <p class="sub">${escapeHtml(store.cat)} · 판교역에서 ${fmtDist(store.dist)}${store.rating ? ` · ★ ${store.rating}` : ''}</p>
         <div class="tags">${store.tags.map((t) => `<span>#${escapeHtml(t)}</span>`).join('')}</div>
-        <a class="naver" href="${naver}" target="_blank" rel="noopener">네이버 지도에서 열기 →</a>
+        <div class="result-btns">
+          <a class="naver" href="${naver}" target="_blank" rel="noopener">네이버 지도에서 열기 →</a>
+          <button id="drop" class="btn drop">❌ 탈락! <small>비슷한 ${hit}곳 빼고 새 업종으로</small></button>
+        </div>
       </div>
     </div>`;
+  $('#drop').onclick = () => eliminate(store);
 
   $$('#pool-list li').forEach((li) => li.classList.toggle('win', +li.dataset.idx === idx));
   const win = $(`#pool-list li[data-idx="${idx}"]`);
@@ -158,9 +314,9 @@ let charging = false;
 let chargeStart = 0;
 let chargeRaf = null;
 
-const CHARGE_MS = 1400; // 최대 충전까지 걸리는 시간
-const OMEGA_MIN = 9;
-const OMEGA_MAX = 31;
+const CHARGE_MS = 900; // 최대 충전까지 걸리는 시간
+const OMEGA_MIN = 8;
+const OMEGA_MAX = 22;
 
 function chargeLevel() {
   return Math.min((performance.now() - chargeStart) / CHARGE_MS, 1);
@@ -268,7 +424,7 @@ document.addEventListener('keyup', (e) => {
     if (Math.abs(vel) > 1.2) {
       $('#result').classList.add('hidden');
       $$('#pool-list li').forEach((li) => li.classList.remove('win'));
-      wheel.spin(Math.sign(vel) * Math.min(Math.abs(vel), 34));
+      wheel.spin(Math.sign(vel) * Math.min(Math.abs(vel), 26));
     }
   };
   cv.addEventListener('pointerup', endDrag);

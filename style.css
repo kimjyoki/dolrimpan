@@ -406,6 +406,29 @@ select {
 }
 .result .naver:active { transform: translateY(2px); box-shadow: 0 1px 0 #027a38; }
 
+.result-btns { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.btn.drop {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  font: 900 12px "Gothic A1", sans-serif;
+  color: #fff;
+  background: linear-gradient(#f0434a, #c0141b);
+  border: none; border-radius: 8px;
+  box-shadow: 0 3px 0 #7d0a0e;
+  cursor: pointer;
+}
+.btn.drop small { font-weight: 700; font-size: 10px; opacity: 0.85; }
+.btn.drop:hover { filter: brightness(1.1); }
+.btn.drop:active { transform: translateY(2px); box-shadow: 0 1px 0 #7d0a0e; }
+
+.status .warn { color: #ff9aa0; font-weight: 700; }
+.status .link {
+  padding: 0; border: none; background: none;
+  font: 800 inherit; font-size: 11px;
+  color: var(--yellow); text-decoration: underline;
+  cursor: pointer;
+}
+
 /* --- 목록 --- */
 .pool ul {
   list-style: none; margin: 0; padding: 0;
@@ -421,6 +444,35 @@ select {
   background: rgba(255,212,0,0.2);
   border-radius: 8px;
   box-shadow: inset 0 0 0 2px var(--yellow);
+}
+
+/* 탈락 — 붉게 물들며 접혀 사라진다 */
+.pool li.doomed {
+  animation: doom 0.5s ease-in forwards;
+  position: relative;
+}
+.pool li.doomed::after {
+  content: "탈락";
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font: 900 15px "Black Han Sans", sans-serif;
+  letter-spacing: 6px;
+  color: #ff5a60;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
+}
+@keyframes doom {
+  0%   { background: rgba(232,38,45,0); }
+  25%  { background: rgba(232,38,45,0.45); transform: translateX(-5px); }
+  40%  { transform: translateX(5px); }
+  55%  { transform: translateX(0); opacity: 1; }
+  100% { opacity: 0; transform: scaleY(0.2); filter: blur(3px); }
+}
+
+/* 새로 들어온 가게 */
+.pool li.fresh { animation: fresh 0.55s cubic-bezier(0.2, 1.4, 0.4, 1); }
+@keyframes fresh {
+  0%   { opacity: 0; transform: translateX(28px); background: rgba(124,243,160,0.35); }
+  100% { opacity: 1; transform: none; background: transparent; }
 }
 .pool .no { font: 900 11px monospace; color: var(--gold); width: 20px; flex: none; }
 .pool img { width: 34px; height: 34px; flex: none; border-radius: 6px; object-fit: cover; background: #222; }

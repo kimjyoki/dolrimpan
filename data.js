@@ -1,5 +1,5 @@
-// 판교역(37.39465, 127.11138) 반경 2km 안에서 소주를 파는 가게 486곳.
-// 카페·베이커리 등 주류 미취급 업종만 제외. soju:true = 메뉴/리뷰에서 소주 판매를 직접 확인한 곳.
+// 판교역(37.39465, 127.11138) 반경 2km 안에서 소주를 파는 가게 360곳.
+// 카페·베이커리·패스트푸드·패밀리레스토랑·뷔페·오마카세·와인바/위스키바·한우 전문점 등 "술상" 성격과 안 맞는 곳은 제외.
 // 출처: 다이닝코드 공개 검색 API + 업소 프로필 (2026-07 수집)
 window.STORES = [
  {
@@ -48,38 +48,6 @@ window.STORES = [
    "술모임",
    "무료주차",
    "시끌벅적한"
-  ]
- },
- {
-  "id": "REcZkp87TAwt",
-  "name": "리스카페",
-  "menu": "카페 리코타 라자냐",
-  "cat": "브런치, 보드카",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260406125305_photo1_06d69fb0c864.webp",
-  "dist": 957,
-  "score": 81,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
-  ]
- },
- {
-  "id": "JrKuPgRzdLzA",
-  "name": "텍사스로드하우스 현대백화점 판교점",
-  "menu": "사우스 텍사스 스테이크 세트",
-  "cat": "스테이크, 미국",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260512073611_photo1_f7b303d19ccb.webp",
-  "dist": 167,
-  "score": 80,
-  "rating": 4.4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
   ]
  },
  {
@@ -147,22 +115,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "SMbvbbgeW25O",
-  "name": "콜렉티보 판교테크원점",
-  "menu": "우삼겹 불고기 샐러드",
-  "cat": "카페, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260503060849488_photo_2abba4b6a714.webp",
-  "dist": 95,
-  "score": 77,
-  "rating": 4.2,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "캐주얼한"
-  ]
- },
- {
   "id": "UAEuy4KDhhw0",
   "name": "사위식당 판교점",
   "menu": "한우대창덮밥",
@@ -208,22 +160,6 @@ window.STORES = [
    "회식",
    "무료주차",
    "시끌벅적한"
-  ]
- },
- {
-  "id": "JWscan21Kmtv",
-  "name": "스시다케루",
-  "menu": "런치 오마카세",
-  "cat": "스시오마카세, 사시미",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251230082236712_photo_f137134b9faf.webp",
-  "dist": 1127,
-  "score": 77,
-  "rating": 4.8,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
   ]
  },
  {
@@ -275,22 +211,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "Kd3c6PWeQS7Z",
-  "name": "라디오베이",
-  "menu": "핫 페퍼로니 피자",
-  "cat": "파스타, 피맥",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260129002416_photo1_987a5e52fb0f.webp",
-  "dist": 329,
-  "score": 76,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
-  ]
- },
- {
   "id": "HjsOpPanZLJq",
   "name": "정희 판교아브뉴프랑점",
   "menu": "새우감자전",
@@ -302,22 +222,6 @@ window.STORES = [
   "soju": false,
   "tags": [
    "데이트",
-   "무료주차",
-   "깔끔한"
-  ]
- },
- {
-  "id": "cAgWYCmZNDIY",
-  "name": "빕스",
-  "menu": "뷔페",
-  "cat": "뷔페, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260511092749_photo1_ca98befc6a43.webp",
-  "dist": 393,
-  "score": 76,
-  "rating": 3.9,
-  "soju": false,
-  "tags": [
-   "가족외식",
    "무료주차",
    "깔끔한"
   ]
@@ -387,38 +291,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "hZI2YLYmNHKx",
-  "name": "앤디쉬",
-  "menu": "성인 주중 디너",
-  "cat": "뷔페, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250710075756_photo1_be36f39fdbbe.webp",
-  "dist": 173,
-  "score": 75,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
-  "id": "4SpLanB94Aiv",
-  "name": "마키노차야",
-  "menu": "성인 / 주중런치",
-  "cat": "뷔페, 간장게장",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260225072403372_photo_.webp",
-  "dist": 201,
-  "score": 75,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "푸짐한"
-  ]
- },
- {
   "id": "lkl9I2StzgUk",
   "name": "골드피쉬얌차하우스",
   "menu": "시그니처 볶음밥",
@@ -483,22 +355,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "crGlKGst1NfA",
-  "name": "펠른 현대백화점 판교점",
-  "menu": "크렘브륄레 치즈케이크",
-  "cat": "더치커피, 위스키",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260101235151_photo1_d7d578b999f9.webp",
-  "dist": 258,
-  "score": 74,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "7RybldEWe4Rn",
   "name": "어슬청담 판교아브뉴프랑점",
   "menu": "명품푸짐 어슬 소갈비찜",
@@ -531,22 +387,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "voBhGzcNwHdz",
-  "name": "파파라구",
-  "menu": "식스 치즈 피자",
-  "cat": "라자냐, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260408125833560_photo_de1862ddb2bb.webp",
-  "dist": 999,
-  "score": 74,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "이국적/이색적",
-   "테라스"
-  ]
- },
- {
   "id": "kDoghakyQGYG",
   "name": "서현실비",
   "menu": "(점심)양념소갈비 정식",
@@ -560,54 +400,6 @@ window.STORES = [
    "식신로드",
    "술모임",
    "무료주차"
-  ]
- },
- {
-  "id": "74gjF0046J5B",
-  "name": "더이탈리안클럽 판교테크원점",
-  "menu": "화이트 라구 파스타",
-  "cat": "파스타, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260221105125_photo1_046443d7381f.webp",
-  "dist": 112,
-  "score": 73,
-  "rating": 4.1,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
-  "id": "oAAlKQp5deUz",
-  "name": "매드포갈릭 판교라스트리트점",
-  "menu": "스테이크 & 립 콤보 세트",
-  "cat": "파스타, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260414114418299_menu_.webp",
-  "dist": 187,
-  "score": 73,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "배달"
-  ]
- },
- {
-  "id": "0W0Gb83afYYo",
-  "name": "이탈리",
-  "menu": "마르게리타 피자",
-  "cat": "파스타, 칵테일",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260218064348_photo1_VQqJSCTzFQ7q.webp",
-  "dist": 189,
-  "score": 73,
-  "rating": 3.9,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "캐주얼한"
   ]
  },
  {
@@ -672,22 +464,6 @@ window.STORES = [
    "데이트",
    "무료주차",
    "서민적인"
-  ]
- },
- {
-  "id": "7WspsORbSM3W",
-  "name": "멀멀 판교",
-  "menu": "스파이시 레몬 앤쵸비 파스타",
-  "cat": "브런치, 와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260507050507470_photo_d6149deeb647.webp",
-  "dist": 1197,
-  "score": 73,
-  "rating": 3.7,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
   ]
  },
  {
@@ -850,22 +626,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "zVDamONDLuvs",
-  "name": "빈티지1988",
-  "menu": "못난이 감자 뇨끼",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250811055730_photo1_be43bcb3feda.webp",
-  "dist": 777,
-  "score": 72,
-  "rating": 4.2,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "예쁜"
-  ]
- },
- {
   "id": "LbTXKgvXYPqV",
   "name": "서울멸치쌈밥",
   "menu": "멸치튀김",
@@ -943,22 +703,6 @@ window.STORES = [
    "식사모임",
    "무료주차",
    "조용한"
-  ]
- },
- {
-  "id": "NufilIv0qvug",
-  "name": "리듬앤버거",
-  "menu": "더블리듬앤버거",
-  "cat": "수제버거, 펍",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251222033455_photo1_ab00a92a75cf.webp",
-  "dist": 321,
-  "score": 71,
-  "rating": 4.2,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "깔끔한"
   ]
  },
  {
@@ -1074,22 +818,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "Xk9RsvwBF1Ne",
-  "name": "칠리로29 판교점",
-  "menu": "칠리 비프 스페셜 버거",
-  "cat": "핫도그, 맥주",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260506092914116_photo_7add84c05a4b.webp",
-  "dist": 1839,
-  "score": 71,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "캐주얼한"
-  ]
- },
- {
   "id": "PSRlBnjnKSMX",
   "name": "푸에르코 판교점",
   "menu": "차돌깍두기볶음밥",
@@ -1103,38 +831,6 @@ window.STORES = [
    "회식",
    "무료주차",
    "고급스러운"
-  ]
- },
- {
-  "id": "f7XXbMjXKe2t",
-  "name": "라그릴리아 판교점",
-  "menu": "체다 비프 볼로네제 파스타",
-  "cat": "파스타, 스테이크",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260129112416_photo1_3c76102fd7d1.webp",
-  "dist": 145,
-  "score": 70,
-  "rating": 4.2,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "깔끔한"
-  ]
- },
- {
-  "id": "jn1RcvcPXUkK",
-  "name": "경복궁",
-  "menu": "양념갈비코스",
-  "cat": "한정식, 양념갈비",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250131124733_photo1_6cd7f81d44e8.webp",
-  "dist": 175,
-  "score": 70,
-  "rating": 4.4,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "격식있는"
   ]
  },
  {
@@ -1218,38 +914,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "Yy0O9tyGF3Sb",
-  "name": "오픈커피",
-  "menu": "스페셜티 배치브루",
-  "cat": "커피, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251211190345_photo1_7fcb8ec9a81b.webp",
-  "dist": 1061,
-  "score": 70,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "혼카페",
-   "무료주차",
-   "예쁜"
-  ]
- },
- {
-  "id": "P3peEglGMxRJ",
-  "name": "리얼스페인",
-  "menu": "스테이크",
-  "cat": "스페인음식, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251231063709_photo1_156024ca18bb.webp",
-  "dist": 1099,
-  "score": 70,
-  "rating": 4.1,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
-  ]
- },
- {
   "id": "DvZ9U97BfAg6",
   "name": "다이호시",
   "menu": "사시미 모리아와세 1인",
@@ -1295,38 +959,6 @@ window.STORES = [
    "가족외식",
    "격식있는",
    "개별룸"
-  ]
- },
- {
-  "id": "Aiy0giJXltUs",
-  "name": "참다운 정육식당",
-  "menu": "점심특선_한우 등심양념구이 정식",
-  "cat": "한우, 한우등심",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240623055119_photo1_e3RM93Amxk3j.webp",
-  "dist": 1461,
-  "score": 70,
-  "rating": 4.5,
-  "soju": false,
-  "tags": [
-   "회식",
-   "무료주차",
-   "지역주민이찾는"
-  ]
- },
- {
-  "id": "8hFTUh7jGomS",
-  "name": "비스트로 피요",
-  "menu": "봉골레 파스타",
-  "cat": "레스토랑, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260510074540_photo1_ae025b6f0067.webp",
-  "dist": 1909,
-  "score": 70,
-  "rating": 4.5,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "지역주민이찾는"
   ]
  },
  {
@@ -1410,22 +1042,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "9Pu8zKXLoF7J",
-  "name": "오마카세 오사이초밥 판교점",
-  "menu": "도미.연어 머리 구이",
-  "cat": "오마카세, 사시미",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250406071014337_photo_1af4bf39e2f3.jpg",
-  "dist": 271,
-  "score": 69,
-  "rating": 4.5,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "캐주얼한",
-   "예약필수"
-  ]
- },
- {
   "id": "zMWDTEslNtPm",
   "name": "바차 판교점",
   "menu": "바차바다찜",
@@ -1501,38 +1117,6 @@ window.STORES = [
   "soju": false,
   "tags": [
    "혼밥",
-   "캐주얼한"
-  ]
- },
- {
-  "id": "aSE9Cd7AjdU7",
-  "name": "구우트",
-  "menu": "Ulleung rice",
-  "cat": "와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250330065603540_photo_f231e53407bb.webp",
-  "dist": 926,
-  "score": 69,
-  "rating": 3.9,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "깔끔한",
-   "예약필수"
-  ]
- },
- {
-  "id": "LNLbO9EMw3MB",
-  "name": "올덴브라운",
-  "menu": "APPLE BRIE DOUGH",
-  "cat": "카페, 펍",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250419082818_photo1_0ceb032806e7.webp",
-  "dist": 968,
-  "score": 69,
-  "rating": 4.8,
-  "soju": false,
-  "tags": [
-   "차모임",
-   "무료주차",
    "캐주얼한"
   ]
  },
@@ -1633,38 +1217,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "KducKluJ1m0K",
-  "name": "우몽블랙 판교점",
-  "menu": "한우해장라면",
-  "cat": "한우, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241226042708651_photo_f231e53407bb.webp",
-  "dist": 240,
-  "score": 68,
-  "rating": 4.6,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "런치코스"
-  ]
- },
- {
-  "id": "foo9t77NtZQ9",
-  "name": "쉐누하누",
-  "menu": "숙성 안심",
-  "cat": "한우, 숙성한우",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260504123956_photo1_64dd3e859a0e.webp",
-  "dist": 254,
-  "score": 68,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "xkYIQEy8txAV",
   "name": "청담보리가",
   "menu": "고등어구이 정식",
@@ -1694,22 +1246,6 @@ window.STORES = [
    "식사모임",
    "무료주차",
    "고급스러운"
-  ]
- },
- {
-  "id": "ygyLkELGEboQ",
-  "name": "붓처스컷 아브뉴프랑 판교점",
-  "menu": "티본스테이크",
-  "cat": "스테이크, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250321091929_photo1_33460debfee6.webp",
-  "dist": 391,
-  "score": 68,
-  "rating": 3.8,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "배달"
   ]
  },
  {
@@ -1809,38 +1345,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "WFMlxgjlYROz",
-  "name": "핏제리아체뽀",
-  "menu": "체뽀파스타",
-  "cat": "화덕피자, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250726094822891_photo_f137134b9faf.webp",
-  "dist": 1160,
-  "score": 68,
-  "rating": 4.8,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "깔끔한",
-   "콜키지"
-  ]
- },
- {
-  "id": "92F8pV7NuEzz",
-  "name": "아르틴",
-  "menu": "크림치즈프렌치토스트",
-  "cat": "에그베네딕트, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250825082835_photo1_7aa3f6f73a4a.webp",
-  "dist": 204,
-  "score": 67,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "예쁜",
-   "테라스"
-  ]
- },
- {
   "id": "7Bni7f0vz8BU",
   "name": "해가옥",
   "menu": "점심 수육정식",
@@ -1889,22 +1393,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "ZdCLefZtAjE4",
-  "name": "스시이야시",
-  "menu": "콜키지 - 사케 & 와인",
-  "cat": "스시오마카세, 위스키",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250821123942956_photo_60df54d1ae48.webp",
-  "dist": 254,
-  "score": 67,
-  "rating": 4.5,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "디너코스",
-   "예약필수"
-  ]
- },
- {
   "id": "hxz60xNUQScx",
   "name": "홍대칼국수와족발 판교역점",
   "menu": "콤보세트",
@@ -1934,22 +1422,6 @@ window.STORES = [
    "회식",
    "시끌벅적한",
    "테라스"
-  ]
- },
- {
-  "id": "mR0NndrQdyYg",
-  "name": "울프스덴",
-  "menu": "파스타",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260426021902_photo1_74d28d39f34a.webp",
-  "dist": 704,
-  "score": 67,
-  "rating": 3.4,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "배달"
   ]
  },
  {
@@ -2001,22 +1473,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "rTqWvQf9B97D",
-  "name": "데이빗 앤 룰스",
-  "menu": "트러플을 올린 비프 타르타르",
-  "cat": "스테이크, 드라이에이징",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240626052809_photo1_5ea5390af79d.webp",
-  "dist": 1009,
-  "score": 67,
-  "rating": 4.6,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "VS5up5sGJljF",
   "name": "스시가좋아서",
   "menu": "스시",
@@ -2030,22 +1486,6 @@ window.STORES = [
    "혼밥",
    "무료주차",
    "가성비좋은"
-  ]
- },
- {
-  "id": "yYO0mgacQ9Ul",
-  "name": "폴트버거 판교점",
-  "menu": "싱글치즈버거 세트",
-  "cat": "수제버거, 치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240315104106_photo1_619d0e463c75.webp",
-  "dist": 109,
-  "score": 66,
-  "rating": 2.8,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "무료주차",
-   "배달"
   ]
  },
  {
@@ -2129,22 +1569,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "zahxJgYLu3em",
-  "name": "꿰다",
-  "menu": "레어치즈 케이크",
-  "cat": "오마카세, 요리주점",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260501125307_photo1_f0bee99de29b.webp",
-  "dist": 371,
-  "score": 66,
-  "rating": 4.4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "dm6rA0rX8ULY",
   "name": "조박사짬뽕",
   "menu": "명품해물짬뽕",
@@ -2174,22 +1598,6 @@ window.STORES = [
    "식사모임",
    "무료주차",
    "시끌벅적한"
-  ]
- },
- {
-  "id": "5fvCNKdo3ufw",
-  "name": "스시코호시",
-  "menu": "런치",
-  "cat": "스시오마카세, 참돔",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250403022835_photo1_b69042a34009.webp",
-  "dist": 732,
-  "score": 66,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "무료주차",
-   "깔끔한"
   ]
  },
  {
@@ -2288,22 +1696,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "PBlyFFPXCLXn",
-  "name": "순우가",
-  "menu": "한우 갈비살",
-  "cat": "한우, 갈비탕",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250321084727_photo1_311569ff0135.jpg",
-  "dist": 1039,
-  "score": 66,
-  "rating": 4.4,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "ekp00D3TCjEi",
   "name": "명백집 분당점",
   "menu": "(특) 돼지곰탕",
@@ -2380,22 +1772,6 @@ window.STORES = [
   "tags": [
    "가족외식",
    "시끌벅적한"
-  ]
- },
- {
-  "id": "6uJkVsxY0pYw",
-  "name": "창고43 판교점",
-  "menu": "한우얼큰해장국",
-  "cat": "한우, 한우꼬리곰탕",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260326105034380_photo_87baecb15256.webp",
-  "dist": 112,
-  "score": 65,
-  "rating": 4.3,
-  "soju": false,
-  "tags": [
-   "회식",
-   "고급스러운",
-   "콜키지"
   ]
  },
  {
@@ -2511,22 +1887,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "tw87ezHyUDpI",
-  "name": "올덴그레이",
-  "menu": "오리지날 까르보나라 파스타",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250111040351_photo1_6e4f9045f461.webp",
-  "dist": 970,
-  "score": 65,
-  "rating": 3.4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "예쁜"
-  ]
- },
- {
   "id": "WAkFYUkKaiA8",
   "name": "최고야전국5대짬뽕",
   "menu": "탕수육 소",
@@ -2540,22 +1900,6 @@ window.STORES = [
    "해장",
    "시끌벅적한",
    "포장"
-  ]
- },
- {
-  "id": "EmgYQNg86dSU",
-  "name": "본가광양불고기",
-  "menu": "광양불고기",
-  "cat": "한우, 광양불고기",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251030085606_photo1_ff2d54927df1.webp",
-  "dist": 1444,
-  "score": 65,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "회식",
-   "격식있는",
-   "셀프바"
   ]
  },
  {
@@ -2719,38 +2063,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "yuDIYbKgqFnU",
-  "name": "비버스피자",
-  "menu": "화이트 머쉬룸 라구 파스타",
-  "cat": "피자, 피맥",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260609101926_photo7_9d91752b6094.webp",
-  "dist": 957,
-  "score": 64,
-  "rating": 3.5,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "감각적인"
-  ]
- },
- {
-  "id": "df2jq7ARa8bv",
-  "name": "앤도버",
-  "menu": "미트볼 토마토 파스타",
-  "cat": "브런치, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260308063257_photo1_5ea5390af79d.webp",
-  "dist": 1127,
-  "score": 64,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "분위기좋은"
-  ]
- },
- {
   "id": "SMpjsTLm8iZW",
   "name": "바름",
   "menu": "곰탕",
@@ -2893,22 +2205,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "QM1uQF3242tt",
-  "name": "블랙울프 판교점",
-  "menu": "허니자몽빙수",
-  "cat": "카페, 빙수",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260101142235_photo1_5ea5390af79d.webp",
-  "dist": 955,
-  "score": 63,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "모임",
-   "깔끔한",
-   "테이크아웃"
-  ]
- },
- {
   "id": "W2XjGlpWMRwZ",
   "name": "춘업순대국과0627부대찌개",
   "menu": "주님세트",
@@ -2922,22 +2218,6 @@ window.STORES = [
    "해장",
    "무료주차",
    "시끌벅적한"
-  ]
- },
- {
-  "id": "qNbL59TIikX0",
-  "name": "스시나나",
-  "menu": "스시나나 카이센동",
-  "cat": "오마카세, 참치",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260506093113351_photo_7add84c05a4b.webp",
-  "dist": 1790,
-  "score": 63,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "예약",
-   "예약필수"
   ]
  },
  {
@@ -2973,22 +2253,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "tMGHnMyJTPIV",
-  "name": "판교의 하루일과",
-  "menu": "꿀대구 스테이크",
-  "cat": "이탈리안, 와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241031064942_photo1_3cbdf5af456b.webp",
-  "dist": 112,
-  "score": 62,
-  "rating": 3,
-  "soju": false,
-  "tags": [
-   "소개팅장소",
-   "캐주얼한",
-   "룸식"
-  ]
- },
- {
   "id": "tXfY7MfIJ2Od",
   "name": "압구정제주집 판교점",
   "menu": "녹용삼겹",
@@ -3017,22 +2281,6 @@ window.STORES = [
   "tags": [
    "회식",
    "깔끔한"
-  ]
- },
- {
-  "id": "FSAHUR8qnJ7w",
-  "name": "오늘와인한잔 판교점",
-  "menu": "치즈 찹스테이크",
-  "cat": "와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240801124235939_photo_2f7611ecaa63.webp",
-  "dist": 270,
-  "score": 62,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "술모임",
-   "안주",
-   "테라스"
   ]
  },
  {
@@ -3115,22 +2363,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "FUxejDnwhzSP",
-  "name": "브루클린",
-  "menu": "치즈피자",
-  "cat": "피자, 피맥",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20231225054842_photo1_577e7ed4211d.webp",
-  "dist": 922,
-  "score": 62,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "점심회식",
-   "예약",
-   "테라스"
-  ]
- },
- {
   "id": "iVBMrXgQzPL0",
   "name": "일류",
   "menu": "스페셜 사시미",
@@ -3144,22 +2376,6 @@ window.STORES = [
    "술모임",
    "배달",
    "서민적인"
-  ]
- },
- {
-  "id": "ir3cROq6MnWt",
-  "name": "무튼",
-  "menu": "할라피뇨파스타",
-  "cat": "브런치, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241021042429_photo1_7891439533b4.webp",
-  "dist": 953,
-  "score": 62,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "캐주얼한"
   ]
  },
  {
@@ -3223,22 +2439,6 @@ window.STORES = [
    "회식장소",
    "배달",
    "깔끔한"
-  ]
- },
- {
-  "id": "fxzqTCZELvbI",
-  "name": "양재정육식당",
-  "menu": "한우차돌박이 150g",
-  "cat": "한우, 한우국밥",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20230524120213_photo1_f5829e5fe9a2.webp",
-  "dist": 308,
-  "score": 61,
-  "rating": 3.7,
-  "soju": false,
-  "tags": [
-   "회식",
-   "서민적인",
-   "예약가능"
   ]
  },
  {
@@ -3386,22 +2586,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "DnEbVozqOCqr",
-  "name": "스시히로",
-  "menu": "런치 오마카세",
-  "cat": "스시오마카세, 참치",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250409072433462_photo_8896e61dfa71.webp",
-  "dist": 762,
-  "score": 60,
-  "rating": 4.5,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "디너코스",
-   "예약필수"
-  ]
- },
- {
   "id": "VkfDWCucuML7",
   "name": "아침산저녁바다 테크노밸리점",
   "menu": "얼큰민물새우탕",
@@ -3482,22 +2666,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "fsQ3rKhIzik5",
-  "name": "그래비티 서울 판교 제로비티",
-  "menu": "그래비티 버거",
-  "cat": "브런치, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240501110140_photo1_ff1d1f3508f7.webp",
-  "dist": 170,
-  "score": 59,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "다이닝",
-   "콜키지"
-  ]
- },
- {
   "id": "IRT7Hh3h1JLL",
   "name": "풍류 더 블랙",
   "menu": "석쇠 불고기 떡볶이",
@@ -3527,22 +2695,6 @@ window.STORES = [
    "가족식사",
    "깔끔한",
    "베이비체어"
-  ]
- },
- {
-  "id": "wkxC01aqeGYp",
-  "name": "차고145",
-  "menu": "런치 생갈비살 정식",
-  "cat": "숙성한우, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20230523115859_photo1_f5829e5fe9a2.webp",
-  "dist": 239,
-  "score": 59,
-  "rating": 3.2,
-  "soju": false,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "지역주민이찾는"
   ]
  },
  {
@@ -3610,22 +2762,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "8Dqa00O9k1vy",
-  "name": "우테이블",
-  "menu": "런지 차돌 깍두기 볶음밥",
-  "cat": "한우, 소주",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250402055718_photo1_e3b5f938f691.webp",
-  "dist": 427,
-  "score": 59,
-  "rating": 4.9,
-  "soju": true,
-  "tags": [
-   "식사모임",
-   "무료주차",
-   "격식있는"
-  ]
- },
- {
   "id": "MWVZKfeFkWh0",
   "name": "명품보쌈",
   "menu": "보쌈정식",
@@ -3655,38 +2791,6 @@ window.STORES = [
    "회식",
    "깔끔한",
    "콜키지"
-  ]
- },
- {
-  "id": "7bvM5jR8niha",
-  "name": "김떡순",
-  "menu": "칼국수",
-  "cat": "분식, 떡꼬치",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250102092218137_photo_e562f8a464b5.webp",
-  "dist": 937,
-  "score": 59,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "배달",
-   "가성비좋은",
-   "포장"
-  ]
- },
- {
-  "id": "M4KCrNo2yQIL",
-  "name": "됐소",
-  "menu": "전통갈비탕",
-  "cat": "한우, 갈비탕",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20230915023753_photo1_376ba920a933.webp",
-  "dist": 979,
-  "score": 59,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "회식",
-   "무료주차",
-   "서민적인"
   ]
  },
  {
@@ -3848,22 +2952,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "Wg7ZmTtbD0Tm",
-  "name": "우설화",
-  "menu": "양념本갈비 코스",
-  "cat": "한우",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240524200750_photo1_b57593d1e0db.webp",
-  "dist": 1570,
-  "score": 58,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "가족외식",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "pmonLblGphL3",
   "name": "제주꾸숑",
   "menu": "제주 급냉 삼겹살 170g",
@@ -3909,38 +2997,6 @@ window.STORES = [
    "식사모임",
    "무료주차",
    "깔끔한"
-  ]
- },
- {
-  "id": "9Z1pWPvn9E4d",
-  "name": "루프일레븐",
-  "menu": "시그니처 카프레제",
-  "cat": "칵테일",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20251102150258_photo1_8aac4f875a44.webp",
-  "dist": 345,
-  "score": 57,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "술모임",
-   "무료주차",
-   "경관/야경이좋은"
-  ]
- },
- {
-  "id": "vHKzNch1vnNY",
-  "name": "우화",
-  "menu": "한우오마카세",
-  "cat": "한우오마카세, 술집",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240715120545_photo1_d2265f9f5db2.webp",
-  "dist": 357,
-  "score": 57,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "무료주차",
-   "고급스러운"
   ]
  },
  {
@@ -3991,22 +3047,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "2stjaFl254j6",
-  "name": "까사논나",
-  "menu": "파스타세트",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250623103745_photo1_73947bab74d8.webp",
-  "dist": 762,
-  "score": 57,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "소개팅장소",
-   "분위기좋은",
-   "콜키지"
-  ]
- },
- {
   "id": "x02YEzuCaDmg",
   "name": "기네스1759",
   "menu": "칵테일",
@@ -4054,22 +3094,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "1XfQHyzMaJtS",
-  "name": "퀴즈노스 판교테크노밸리점",
-  "menu": "플렉스 스테이크 샐러드",
-  "cat": "샌드위치, 핫치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241023025151931_photo_00ef32c0aa97.webp",
-  "dist": 843,
-  "score": 57,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "런치세트",
-   "매장식사"
-  ]
- },
- {
   "id": "z1xn0kQKwcrX",
   "name": "수작",
   "menu": "한돈꽃삼겹 해물 삼합+물회서비스",
@@ -4083,22 +3107,6 @@ window.STORES = [
    "회식",
    "배달",
    "깔끔한"
-  ]
- },
- {
-  "id": "ed3lgDoU1a5H",
-  "name": "체르또",
-  "menu": "문어샐러드",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240529062312_photo1_f329f8cb4f0c.webp",
-  "dist": 958,
-  "score": 57,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "테라스"
   ]
  },
  {
@@ -4146,37 +3154,6 @@ window.STORES = [
    "데이트",
    "배달",
    "다양한메뉴"
-  ]
- },
- {
-  "id": "GmxDy0RYaZfJ",
-  "name": "스타벅스 판교알파돔타워점",
-  "menu": "자몽 허니 블랙 티",
-  "cat": "커피, 호프",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250717115857_photo1_ab00a92a75cf.webp",
-  "dist": 84,
-  "score": 56,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "혼카페",
-   "시끌벅적한"
-  ]
- },
- {
-  "id": "y9TN3Wixl4Ar",
-  "name": "써브웨이 판교역점",
-  "menu": "피자썹",
-  "cat": "샌드위치, 로스트치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20250731110906_photo1_ed9ca6d92457.webp",
-  "dist": 213,
-  "score": 56,
-  "rating": 3.6,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "깔끔한",
-   "매장식사"
   ]
  },
  {
@@ -4274,22 +3251,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "76a0hpTJqd3N",
-  "name": "삐에뜨라",
-  "menu": "채끝스테이크",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241001044442_photo1_bb41d450dce0.webp",
-  "dist": 1196,
-  "score": 56,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "테라스"
-  ]
- },
- {
   "id": "iFhEEFDIGO8Z",
   "name": "갓잇 서판교점",
   "menu": "GOD 멕시 로제 파스타",
@@ -4319,38 +3280,6 @@ window.STORES = [
    "회식장소",
    "주차",
    "배달"
-  ]
- },
- {
-  "id": "AyuYaWzj4gPy",
-  "name": "터틀",
-  "menu": "엔쵸비 갈릭 오일 파스타",
-  "cat": "파스타, 와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240106012659_photo1_b34ed37c3b25.webp",
-  "dist": 301,
-  "score": 55,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "바테이블"
-  ]
- },
- {
-  "id": "S5TyEsQKObO0",
-  "name": "몰트바 케이브",
-  "menu": "위스키 오마카세",
-  "cat": "칵테일, 위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 311,
-  "score": 55,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "바자리"
   ]
  },
  {
@@ -4386,38 +3315,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "jMONxilZ0J1V",
-  "name": "챠오바라이트",
-  "menu": "누룽지 해물 파스타",
-  "cat": "파스타, 생맥주",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240710030312_photo1_73947bab74d8.webp",
-  "dist": 783,
-  "score": 55,
-  "rating": 2.9,
-  "soju": false,
-  "tags": [
-   "점심회식",
-   "배달",
-   "예약"
-  ]
- },
- {
-  "id": "KKORQ6TMELxB",
-  "name": "맥도날드",
-  "menu": "맥스파이시® 상하이 버거 세트",
-  "cat": "버거, 치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240203070849303_photo_3e43c6f06234.webp",
-  "dist": 802,
-  "score": 55,
-  "rating": 3.9,
-  "soju": false,
-  "tags": [
-   "간식",
-   "배달",
-   "캐주얼한"
-  ]
- },
- {
   "id": "40kMnrUCYzL9",
   "name": "종로계림닭도리탕원조 판교점",
   "menu": "닭도리탕 3인",
@@ -4434,21 +3331,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "uAZlr74nvksy",
-  "name": "김밥집",
-  "menu": "등심돈까스",
-  "cat": "김밥, 육개장",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240617031135453_photo_041f14beb3bf.webp",
-  "dist": 872,
-  "score": 55,
-  "rating": 3,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "다양한메뉴"
-  ]
- },
- {
   "id": "qrNHS49o7dV0",
   "name": "더 올드스탠드",
   "menu": "비스마르크피자",
@@ -4461,22 +3343,6 @@ window.STORES = [
   "tags": [
    "술모임",
    "분위기좋은",
-   "테라스"
-  ]
- },
- {
-  "id": "jDHZcyEOOpJk",
-  "name": "에리아",
-  "menu": "숙성 프렌치 토스트",
-  "cat": "카페, 와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241115085752_photo1_8fa73bbfd2e7.webp",
-  "dist": 1120,
-  "score": 55,
-  "rating": 4.1,
-  "soju": false,
-  "tags": [
-   "소개팅장소",
-   "고급스러운",
    "테라스"
   ]
  },
@@ -4497,22 +3363,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "3YAr2MGf4RvF",
-  "name": "피제리아살레르노 서판교점",
-  "menu": "루꼴라 뽀모도로 파스타",
-  "cat": "화덕피자, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240106061327_photo1_86705af23e9c.webp",
-  "dist": 1918,
-  "score": 55,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "분위기좋은"
-  ]
- },
- {
   "id": "j7hRrZjohaPX",
   "name": "크래버대게나라 판교점",
   "menu": "대게코스",
@@ -4526,22 +3376,6 @@ window.STORES = [
    "가족외식",
    "무료주차",
    "배달"
-  ]
- },
- {
-  "id": "wZ2GfD6NNusK",
-  "name": "샐러드카페 파라",
-  "menu": "치즈 파라다이스 샐러드",
-  "cat": "샐러드, 치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240223045344_photo1_45c1a5e8504a.webp",
-  "dist": 345,
-  "score": 54,
-  "rating": 3.5,
-  "soju": false,
-  "tags": [
-   "다이어트식단",
-   "캐주얼한",
-   "테이크아웃"
   ]
  },
  {
@@ -4672,22 +3506,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "ai6EeTuv2znk",
-  "name": "에이치이에이",
-  "menu": "깻잎 새우 관자 페스토",
-  "cat": "파스타, 와인",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20240421123120_photo1_195b08d34c29.webp",
-  "dist": 1828,
-  "score": 54,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "무료주차",
-   "고급스러운"
-  ]
- },
- {
   "id": "5CqsgoXkPFml",
   "name": "호무랑 그래비티 서울 판교점",
   "menu": "차돌박이 우동",
@@ -4782,21 +3600,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "4RksDPfhjL8p",
-  "name": "파리바게뜨 판교테크노점",
-  "menu": "무설탕 식빵",
-  "cat": "치즈케이크, 세계맥주",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20230305080237_photo1_9be63c30ea2d.webp",
-  "dist": 781,
-  "score": 53,
-  "rating": 3.7,
-  "soju": false,
-  "tags": [
-   "혼카페",
-   "예약"
-  ]
- },
- {
   "id": "SK13kRLU7bPC",
   "name": "고대생막창",
   "menu": "순대곱창볶음",
@@ -4825,22 +3628,6 @@ window.STORES = [
   "tags": [
    "회식",
    "얼큰한"
-  ]
- },
- {
-  "id": "OucqKhwVSzzB",
-  "name": "피자알레 비스트로",
-  "menu": "로제 파스타",
-  "cat": "피자, 피맥",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20220520122908728_photo_732800192596.webp",
-  "dist": 1896,
-  "score": 53,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "배달",
-   "저렴"
   ]
  },
  {
@@ -5124,22 +3911,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "6Q2CLeqCVaT1",
-  "name": "스타벅스 판교H스퀘어점",
-  "menu": "카라멜 마키아또",
-  "cat": "커피, 흑맥주",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241018141702_photo1_bb1f8ffa10a2.webp",
-  "dist": 763,
-  "score": 49,
-  "rating": 3.9,
-  "soju": false,
-  "tags": [
-   "혼카페",
-   "예약",
-   "테이크아웃"
-  ]
- },
- {
   "id": "qYypwS1FbTIM",
   "name": "가장맛있는족발",
   "menu": "족발",
@@ -5153,22 +3924,6 @@ window.STORES = [
    "술모임",
    "배달",
    "깔끔한"
-  ]
- },
- {
-  "id": "5S5z02Id4Dch",
-  "name": "버거킹 판교유스페이스점",
-  "menu": "보일링씨푸드버거 디아블로 세트",
-  "cat": "햄버거, 치킨",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20210922212426_photo3_1827c04188b2.webp",
-  "dist": 793,
-  "score": 49,
-  "rating": 4.4,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "배달",
-   "저렴"
   ]
  },
  {
@@ -5236,22 +3991,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "DMps3drKBtzq",
-  "name": "이야기둘",
-  "menu": "두근두근 갈비 백육개장 전골",
-  "cat": "한우오마카세, 생맥주",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1043,
-  "score": 48,
-  "rating": 2.4,
-  "soju": false,
-  "tags": [
-   "회식",
-   "예약",
-   "예약필수"
-  ]
- },
- {
   "id": "2reKMGRzPloy",
   "name": "양하오 양꼬치",
   "menu": "생양꼬치",
@@ -5281,22 +4020,6 @@ window.STORES = [
    "회식",
    "쾌적한",
    "셀프바"
-  ]
- },
- {
-  "id": "EahBd8VAOXjQ",
-  "name": "잇트",
-  "menu": "제철과일과치즈플레터",
-  "cat": "칵테일",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 247,
-  "score": 47,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "소개팅",
-   "분위기좋은",
-   "편안한의자"
   ]
  },
  {
@@ -5379,22 +4102,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "QxcYraAJ9mvp",
-  "name": "롯데리아",
-  "menu": "번트비프버거 세트",
-  "cat": "버거, 치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 787,
-  "score": 46,
-  "rating": 3,
-  "soju": false,
-  "tags": [
-   "야식",
-   "배달",
-   "깨끗"
-  ]
- },
- {
   "id": "UbKQjZi47SvN",
   "name": "소호정 티벨리점",
   "menu": "국밥",
@@ -5408,22 +4115,6 @@ window.STORES = [
    "회식",
    "점심맛집",
    "룸식당"
-  ]
- },
- {
-  "id": "H78EFP6cpfUg",
-  "name": "엔젤스 쉐어",
-  "menu": "칵테일",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1131,
-  "score": 46,
-  "rating": 5,
-  "soju": false,
-  "tags": [
-   "소개팅장소",
-   "분위기좋은",
-   "바자리"
   ]
  },
  {
@@ -5507,22 +4198,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "nQ63W942bGKS",
-  "name": "끌리마와인",
-  "menu": "와인바",
-  "cat": "와인바, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 829,
-  "score": 44,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "낮술",
-   "배달",
-   "저렴한"
-  ]
- },
- {
   "id": "d64RaMM3NPOU",
   "name": "두둑26",
   "menu": "갈비탕",
@@ -5584,34 +4259,6 @@ window.STORES = [
    "생일파티",
    "안주",
    "포장"
-  ]
- },
- {
-  "id": "KXM7QffPyZw6",
-  "name": "글램라운지",
-  "menu": "맥주/칵테일",
-  "cat": "bar, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 764,
-  "score": 42,
-  "rating": 0,
-  "soju": false,
-  "tags": []
- },
- {
-  "id": "tqUxTaJ5L2pR",
-  "name": "소마",
-  "menu": "Cocktail",
-  "cat": "칵테일, 칵테일바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 795,
-  "score": 42,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "테라스"
   ]
  },
  {
@@ -5679,33 +4326,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "j3Fdqy88XIdF",
-  "name": "도세옥",
-  "menu": "펍서비스",
-  "cat": "브런치, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 212,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": []
- },
- {
-  "id": "wIgcNZupqjPS",
-  "name": "프린트베이커리 현대백화점판교점",
-  "menu": "베이커리",
-  "cat": "베이커리, 위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 216,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트코스",
-   "차분한"
-  ]
- },
- {
   "id": "Cc8Fd9QSn9Ed",
   "name": "와인샵",
   "menu": "술집",
@@ -5716,22 +4336,6 @@ window.STORES = [
   "rating": 0,
   "soju": false,
   "tags": []
- },
- {
-  "id": "gSfeBQfUMTPp",
-  "name": "더 테라스 LA",
-  "menu": "치폴레 피자",
-  "cat": "브런치카페, 피맥",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 222,
-  "score": 25,
-  "rating": 0,
-  "soju": true,
-  "tags": [
-   "소개팅",
-   "분위기좋은",
-   "테라스"
-  ]
  },
  {
   "id": "T1wDam6LVBUW",
@@ -5798,21 +4402,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "lEgHxDioQ9F1",
-  "name": "집잇",
-  "menu": "칵테일",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 247,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "간단하게한잔",
-   "예쁜인테리어"
-  ]
- },
- {
   "id": "KKOuOL17tdoF",
   "name": "마츠카게",
   "menu": "모듬숙성회",
@@ -5835,34 +4424,6 @@ window.STORES = [
   "cat": "요리주점",
   "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
   "dist": 257,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": []
- },
- {
-  "id": "oJCxDfBImvjx",
-  "name": "프로짓",
-  "menu": "치즈플래터",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 268,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "소개팅",
-   "분위기좋은",
-   "바자리"
-  ]
- },
- {
-  "id": "PybLIjU80uNq",
-  "name": "나라와인",
-  "menu": "와인",
-  "cat": "와인, 와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 272,
   "score": 25,
   "rating": 0,
   "soju": false,
@@ -5898,22 +4459,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "zxY7pNA86Fgr",
-  "name": "한우리 블랙 현대백화점 판교점",
-  "menu": "버섯 소고기국수전골",
-  "cat": "한우, 갈비탕",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20260212024136_photo1_f882f424b6ef.webp",
-  "dist": 288,
-  "score": 25,
-  "rating": 4,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "예약",
-   "예약가능"
-  ]
- },
- {
   "id": "0sZqPtYBmA0S",
   "name": "맛남의광장 판교",
   "menu": "닭볶음탕",
@@ -5927,53 +4472,6 @@ window.STORES = [
    "맛남의광장",
    "배달",
    "포장"
-  ]
- },
- {
-  "id": "UtLu9qX26Gbh",
-  "name": "우몽 판교점",
-  "menu": "숙성 채끝등심",
-  "cat": "한우, 술집",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 308,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "회식",
-   "고급스러운",
-   "콜키지"
-  ]
- },
- {
-  "id": "8qUtS9KjVFo4",
-  "name": "코트야드 메리어트 서울 판교 인룸다이닝",
-  "menu": "뷔페",
-  "cat": "뷔페, 맥주",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 321,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "돌잔치",
-   "예약"
-  ]
- },
- {
-  "id": "wDZpcek4qLOb",
-  "name": "씨씨 스트릿 라운지",
-  "menu": "위스키",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 321,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼술",
-   "맛있는안주",
-   "테라스"
   ]
  },
  {
@@ -6052,22 +4550,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "duQXPZ9eGPH8",
-  "name": "헤더",
-  "menu": "위스키",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 377,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼술",
-   "분위기좋은",
-   "바테이블"
-  ]
- },
- {
   "id": "Ke4X2SqlgDPY",
   "name": "샵207",
   "menu": "위스키",
@@ -6114,22 +4596,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "wPoIASzLExsY",
-  "name": "디셈버 세컨드",
-  "menu": "비올레타 Violetta",
-  "cat": "칵테일, 칵테일바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 381,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "바자리"
-  ]
- },
- {
   "id": "DUh6HHci0Ino",
   "name": "오장동흥남집 아브뉴프랑판교점",
   "menu": "한우물냉면",
@@ -6144,20 +4610,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "XsN07XHxzRmb",
-  "name": "구전동화 판교점",
-  "menu": "런치",
-  "cat": "오마카세, 술집",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 393,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "디너코스"
-  ]
- },
- {
   "id": "fror0zSINyk9",
   "name": "계열사 아브뉴프랑판교점",
   "menu": "치킨",
@@ -6169,36 +4621,6 @@ window.STORES = [
   "soju": false,
   "tags": [
    "테이크아웃"
-  ]
- },
- {
-  "id": "PPiuC9qlzRyc",
-  "name": "삼첩분식",
-  "menu": "떡볶이",
-  "cat": "떡볶이, 순살치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 424,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "간식",
-   "배달",
-   "매콤"
-  ]
- },
- {
-  "id": "hTbSmuoV2gvS",
-  "name": "떡볶이창고 백현점",
-  "menu": "추천메뉴",
-  "cat": "떡볶이, 치킨집",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 531,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "안주"
   ]
  },
  {
@@ -6265,37 +4687,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "TAUPn6Yu8Ue9",
-  "name": "글렌에덴",
-  "menu": "Red House Wine",
-  "cat": "위스키, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 736,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "낮술",
-   "깔끔한",
-   "테라스"
-  ]
- },
- {
-  "id": "nWZeCugqVG3V",
-  "name": "청여수",
-  "menu": "나주곰탕",
-  "cat": "종합분식, 국밥",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 736,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "시원"
-  ]
- },
- {
   "id": "WyCf7MjZT59H",
   "name": "가르텐HOF&REST 판교테크노밸리점",
   "menu": "핫스파이스치킨",
@@ -6358,22 +4749,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "9N8aKQLlRtsC",
-  "name": "비눔",
-  "menu": "치즈 플래터",
-  "cat": "파스타, 와인바",
-  "img": "https://d12zq4w4guyljn.cloudfront.net/300_300_20241202120245_photo1_bb41d450dce0.webp",
-  "dist": 762,
-  "score": 25,
-  "rating": 3,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "노키즈존"
-  ]
- },
- {
   "id": "Hb9Il7pZOQL2",
   "name": "막창막장",
   "menu": "오리지널생막창",
@@ -6404,34 +4779,6 @@ window.STORES = [
    "푸짐한",
    "셀프바"
   ]
- },
- {
-  "id": "dueiy7Sa8dqt",
-  "name": "가마로닭강정 앤 치코버거",
-  "menu": "닭껍질튀김",
-  "cat": "버거, 맥주",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 762,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "간식",
-   "배달",
-   "저렴한"
-  ]
- },
- {
-  "id": "381g2HGIBiuW",
-  "name": "업비트커피",
-  "menu": "업비트브루잉",
-  "cat": "위스키",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 794,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": []
  },
  {
   "id": "vkn7ZFKzjXnA",
@@ -6532,22 +4879,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "jcq9JMqvWAHG",
-  "name": "판교로262",
-  "menu": "페스츄리 불고기 피자",
-  "cat": "위스키, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 836,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼술",
-   "분위기좋은",
-   "바자리"
-  ]
- },
- {
   "id": "NabRQ1jZcMCI",
   "name": "레벨업",
   "menu": "위스키셋",
@@ -6591,38 +4922,6 @@ window.STORES = [
    "혼밥",
    "깔끔한",
    "테이크아웃"
-  ]
- },
- {
-  "id": "xuiXdXO77yKz",
-  "name": "런트리",
-  "menu": "와플",
-  "cat": "카페, 칵테일",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 858,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "모임",
-   "편안한",
-   "라이브공연"
-  ]
- },
- {
-  "id": "R4iKIT6o2PcS",
-  "name": "러벅스",
-  "menu": "치킨 프리카세",
-  "cat": "케이크, 와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 889,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "기념일",
-   "배달",
-   "특별한날"
   ]
  },
  {
@@ -6748,22 +5047,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "RdlUf42MIKfF",
-  "name": "미닛트",
-  "menu": "카페",
-  "cat": "카페, 펍",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 923,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "간단하게한잔",
-   "깔끔한",
-   "테이크아웃"
-  ]
- },
- {
   "id": "wSYk4N0jPvPM",
   "name": "쉐프의삼겹살 판교점",
   "menu": "삼겹살만(300g)",
@@ -6805,38 +5088,6 @@ window.STORES = [
   "tags": [
    "혼밥",
    "저렴"
-  ]
- },
- {
-  "id": "0tDhETBYsdZm",
-  "name": "펠즈피자 판교점",
-  "menu": "치즈피자",
-  "cat": "피자, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 954,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "감각적인"
-  ]
- },
- {
-  "id": "Qehs6tYIKDf4",
-  "name": "북술북술",
-  "menu": "미니 치즈플래터",
-  "cat": "위스키, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 954,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "테라스"
   ]
  },
  {
@@ -6946,54 +5197,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "m8DGcykHcPQo",
-  "name": "엘핀",
-  "menu": "Americano",
-  "cat": "카페, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1088,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼자방문",
-   "분위기좋은",
-   "테이크아웃"
-  ]
- },
- {
-  "id": "lWP9sZI7OkrB",
-  "name": "루프",
-  "menu": "와인바",
-  "cat": "와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1095,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "테라스"
-  ]
- },
- {
-  "id": "Xo9IcBH792Ke",
-  "name": "Loop.",
-  "menu": "루프감자",
-  "cat": "와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1099,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "소개팅장소",
-   "분위기좋은",
-   "테라스"
-  ]
- },
- {
   "id": "frjpXgmlSehP",
   "name": "초밥앤탕",
   "menu": "모둠튀김",
@@ -7024,21 +5227,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "JoIj5CBNXCpZ",
-  "name": "PAN soil & society",
-  "menu": "오늘의 파스타",
-  "cat": "파스타, 치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1214,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "모임장소",
-   "런치세트"
-  ]
- },
- {
   "id": "UMso9WqEGwQM",
   "name": "봄이 머무는 언덕",
   "menu": "안심치킨세트",
@@ -7052,22 +5240,6 @@ window.STORES = [
    "소개팅",
    "뷰맛집",
    "스카이라운지"
-  ]
- },
- {
-  "id": "MSQIsKuYtjOe",
-  "name": "규정공 THE PANGYO",
-  "menu": "한우육회비빔밥",
-  "cat": "한우, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1423,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "배달",
-   "고급스러운"
   ]
  },
  {
@@ -7148,18 +5320,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "KvCWTre4LJGn",
-  "name": "인생선물",
-  "menu": "카페",
-  "cat": "카페, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1593,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": []
- },
- {
   "id": "aZIMoQefbFXd",
   "name": "신화푸드빌리지 판교점",
   "menu": "일식",
@@ -7188,54 +5348,6 @@ window.STORES = [
   "tags": [
    "안주",
    "테라스"
-  ]
- },
- {
-  "id": "mV7CFsxtzyBx",
-  "name": "타임",
-  "menu": "야마자키 12년",
-  "cat": "위스키, 와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1656,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼술",
-   "안주",
-   "바테이블"
-  ]
- },
- {
-  "id": "GXh9RXznUZMA",
-  "name": "Casa Jun",
-  "menu": "스페인식 문어요리",
-  "cat": "스페인요리, 와인바",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1704,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "데이트",
-   "분위기좋은",
-   "예약필수"
-  ]
- },
- {
-  "id": "7Q4pCOelDX3S",
-  "name": "마레아",
-  "menu": "문어 푸실리",
-  "cat": "파스타, 와인",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1754,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "소개팅",
-   "분위기좋은",
-   "예약필수"
   ]
  },
  {
@@ -7324,18 +5436,6 @@ window.STORES = [
   "cat": "치킨",
   "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
   "dist": 1875,
-  "score": 25,
-  "rating": 0,
-  "soju": false,
-  "tags": []
- },
- {
-  "id": "4DHD6QlL5fNm",
-  "name": "모아분식",
-  "menu": "분식",
-  "cat": "분식, 맥주",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1921,
   "score": 25,
   "rating": 0,
   "soju": false,
@@ -7486,38 +5586,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "DU6wXHCpRins",
-  "name": "써브웨이 판교테크노밸리점",
-  "menu": "로티세리 바비큐 치킨",
-  "cat": "샌드위치, 로스트치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 900,
-  "score": 20,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "배달",
-   "미국스타일"
-  ]
- },
- {
-  "id": "IEdFUBwLQKvS",
-  "name": "샐러디 판교테크노밸리점",
-  "menu": "비프에그마요 샌드위치 세트",
-  "cat": "샐러드, 우삼겹",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 922,
-  "score": 20,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "배달",
-   "점심맛집"
-  ]
- },
- {
   "id": "Dy6ca4mlpxeZ",
   "name": "투다리 봇들점",
   "menu": "교자전골",
@@ -7563,22 +5631,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "RxFQmh41aq20",
-  "name": "써브웨이 판교브릿지타워점",
-  "menu": "피자썹",
-  "cat": "샌드위치, 로스트치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1387,
-  "score": 20,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "건강식",
-   "배달",
-   "점심맛집"
-  ]
- },
- {
   "id": "PqcOiKEiqJfn",
   "name": "생활맥주 판교도서관점",
   "menu": "통통새우바와 새우머리",
@@ -7595,22 +5647,6 @@ window.STORES = [
   ]
  },
  {
-  "id": "eMsY0bUKpYIE",
-  "name": "반올림피자샵 판교점",
-  "menu": "피자 & 훈제치킨 세트",
-  "cat": "피자, 훈제치킨",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1870,
-  "score": 20,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "야식",
-   "배달",
-   "예약"
-  ]
- },
- {
   "id": "D9dyKFYMnUmx",
   "name": "교촌치킨 서판교점",
   "menu": "달걀듬뿍볶음밥",
@@ -7624,22 +5660,6 @@ window.STORES = [
    "야식",
    "배달",
    "매콤"
-  ]
- },
- {
-  "id": "UlYsZMA4gQio",
-  "name": "얌샘김밥 서판교점",
-  "menu": "돈까스제육정식",
-  "cat": "분식, 육개장칼국수",
-  "img": "https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/noimage/1.jpg",
-  "dist": 1883,
-  "score": 20,
-  "rating": 0,
-  "soju": false,
-  "tags": [
-   "혼밥",
-   "배달",
-   "깔끔한"
   ]
  }
 ];
